@@ -1,3 +1,4 @@
+import { AdBanner } from "@/components/AdBanner";
 import { Link } from "@tanstack/react-router";
 import { ArrowLeftRight, Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
@@ -23,7 +24,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       </div>
       {open && <nav aria-label="Mobile" className="border-t border-border px-4 pb-3 sm:hidden">{MENU.map((m) => <Link key={m.to} to={m.to} onClick={() => setOpen(false)} className="block border-b border-border py-3 text-base font-medium last:border-0">{m.label}</Link>)}</nav>}
     </header>
-    <main className="flex-1">{children}</main>
+    <main className="flex-1">{children}<AdBanner /></main>
     <footer className="mt-8 border-t border-border"><div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
       <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2">{LEGAL.map((m) => <Link key={m.to} to={m.to} className="hover:text-foreground">{m.label}</Link>)}</nav>
       <span>© ConvertKit · No account. No watermark. No upload.</span>

